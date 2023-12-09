@@ -43,3 +43,11 @@ jobs:
             docker -v
             java -version
             
+        - name: Files in repository pre checkout 
+          run: ls ${{github.workspace}}         
+
+        - uses: actions/checkout@v3
+        
+        - name: Files in repository after checkout 
+          run: ls ${{github.workspace}} 
+        
